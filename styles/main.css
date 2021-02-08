@@ -1,2 +1,17 @@
 @import url("accueil.css");
 @import url("discographie.css");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+:root{
+    --title: 'Lobster', cursive;
+    --regular: 'Roboto', sans-serif;
+    --bg:#CCDDE7;
+    --text:#0000;
+    --primary:#D29AA3;
+    --primary-alt:#F0ADBA;
+    --secondary:#096F87;
+    --secondary-alt:#0BA4C5;
+}
+.titre{
+    font-family: var(--title);
+  }
