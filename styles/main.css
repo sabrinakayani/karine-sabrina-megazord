@@ -2,6 +2,7 @@
 @import url("discographie.css");
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
 :root{
     --title: 'Lobster', cursive;
     --regular: 'Roboto', sans-serif;
@@ -12,20 +13,27 @@
     --secondary:#096F87;
     --secondary-alt:#0BA4C5;
 }
+
+
 *{
     box-sizing: border-box;
 }
+
+
 html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
   }
+
 .titre{
     font-family: var(--title);
   }
+
 .texte{
     font-family: var(--regular);
 }
+
 header{
     width: 100%;
     height: 100%;

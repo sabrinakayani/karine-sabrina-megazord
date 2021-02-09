@@ -1,1 +1,34 @@
 
+.heroAccueil img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    object-fit: cover;
+}
+
+
+.heroAccueil .imgPortrait {
+    object-position: 0% 20%;
+}
+
+/*.imgPaysage{
+    object-position: 0% 20%;
+}
+*/
+.contrasteAccueil{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: 50%;
+}
+
+.txtAccueil h1{
+    font-size: 125px;
+    color: var(--primary);
+}
+
+.txtAccueil p{
+    font-size:20px;
+}
