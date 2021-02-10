@@ -7,24 +7,17 @@
     object-fit: cover;
 }
 
-.container{
-    position: absolute;
-    height: 100%;
-}
 
 .heroAccueil .imgPortrait {
     object-position: 0% 20%;
 }
 
-/*.imgPaysage{
-    object-position: 0% 20%;
-}
-*/
+
 .contrasteAccueil{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:black;
+    background-color:rgb(70, 70, 70);
     opacity: 50%;
 }
 
@@ -34,9 +27,10 @@
 }
 
 .txtAccueil p{
-    font-size:20px;
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
 }
 
-.txtAccueil{
-    text-align: center;
-}
+
+
