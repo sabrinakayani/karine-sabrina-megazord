@@ -22,7 +22,6 @@
 
 html, body {
     height: 100%;
-    margin: 0;
   }
 
 .titre{
@@ -49,10 +48,11 @@ picture{
     height: 100%;
 }
 
-.heroContainer{
-    width: 100px;
+
+.row{
+    height: 100%;
 }
 
-.heroRow{
-    width: 100%;
+.container{
+    height: 100%;
 }
