@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#ffffff00, #857be2ea);
+    background-image: linear-gradient(#ffffff00, #857be2f5);
 }
 
 .txtDiscographie{
@@ -29,7 +29,8 @@
 }
 
 .txtDiscographie h1{
-    font-size: 50px;
+    font-size: 125px;
+    color: var(--primary);
 }
 
 .txtDiscographie p{
@@ -42,3 +43,4 @@
     background-color: var(--primary);
     border-color: var(--primary-alt);
 }
+
