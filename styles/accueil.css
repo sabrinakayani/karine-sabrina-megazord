@@ -7,6 +7,10 @@
     object-fit: cover;
 }
 
+.container{
+    position: absolute;
+    height: 100%;
+}
 
 .heroAccueil .imgPortrait {
     object-position: 0% 20%;
