@@ -7,11 +7,10 @@
     object-fit: cover;
 }
 
-
-.heroAccueil .imgPortrait {
+/*pour voir young k*/
+.heroAccueil .imgPortrait { 
     object-position: 0% 20%;
 }
-
 
 .contrasteAccueil{
     position: absolute;
@@ -23,14 +22,22 @@
 
 .txtAccueil h1{
     font-size: 125px;
-    color: var(--primary);
+    color: var(--primary);  
 }
 
 .txtAccueil p{
     font-size: 30px;
     font-weight: 400;
-    color: black;
+    color: white;
 }
 
 
+.txtAccueil button{
+    color:white;
+    font-size: 25px;
+    background-color: var(--primary);
+    border-color: var(--primary-alt);
+    border-radius:6px;
+    padding:5px;
+}
 
