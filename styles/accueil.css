@@ -40,3 +40,15 @@
     padding-bottom:5px;
 }
 
+@media (max-width:750px){
+    .txtAccueil h1{
+        font-size:75px;
+    }
+    .txtAccueil p{
+        font-size:20px;
+    }
+
+    .txtAccueil button{
+        font-size: 15px;
+    }
+}
