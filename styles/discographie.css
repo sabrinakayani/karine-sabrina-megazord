@@ -39,3 +39,14 @@
     border-color: var(--primary-alt);
 }
 
+@media (max-width:750px){
+    .txtDiscographie h1{
+        font-size: 75px;
+    }
+    .txtDiscographie p{
+        font-size: 20px;
+    }
+    .txtDiscographie button{
+        font-size: 15px;
+    }
+}
