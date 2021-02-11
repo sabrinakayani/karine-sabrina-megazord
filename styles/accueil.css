@@ -31,13 +31,12 @@
     color: white;
 }
 
-
 .txtAccueil button{
     color:white;
     font-size: 25px;
     background-color: var(--primary);
     border-color: var(--primary-alt);
     border-radius:6px;
-    padding:5px;
+    padding-bottom:5px;
 }
 
