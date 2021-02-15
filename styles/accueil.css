@@ -62,4 +62,21 @@
 .card{
     margin-bottom:10px;
     margin-top:10px;
+    
+  }
+
+  .card-title{
+    font-family: var(--title);
+    color: var(--secondary-alt);
+    font-size: 40px;
+  }
+
+  .positionMembres{
+      font-weight: bold;
+      font-size:20px;
+  }
+
+  .membres .btnPlusAccueil{
+      width:100%;
+      border-radius:6px;
   }
