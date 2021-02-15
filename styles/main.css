@@ -61,10 +61,16 @@ html {
 main{
     height: 100%;
     position: relative;
+    width: 100%;
 }
 
 header{
     position: relative;
     height: 100vh;
     width: 100%;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
 }
