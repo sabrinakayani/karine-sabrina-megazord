@@ -29,7 +29,7 @@
     font-weight: 400;
 }
 
-.txtDiscographie button{
+.btnPlus{
     font-size: 25px;
     padding-bottom:5px;
     color: white;
@@ -46,5 +46,43 @@
     }
     .txtDiscographie button{
         font-size: 15px;
+    }
+}
+
+.album{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.imgAlbum{
+    margin-top:20px ;
+}
+
+.txtAlbum h3{
+    font-family: var(--title);
+    color: var(--secondary);
+    font-size: 30px;
+}
+
+.txtAlbum ol{
+    font-family: var(--regular);
+    font-size: 20px;
+}
+
+main .btnPlus{
+    font-size: 20px;
+    padding-bottom:5px;
+    color: white;
+    background-color: var(--secondary);
+    border-color: var(--secondary-alt);
+}
+
+@media (min-width:576px){
+    .album{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .imgAlbum{
+        margin-top:0px ;
     }
 }
