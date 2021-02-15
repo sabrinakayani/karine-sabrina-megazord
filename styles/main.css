@@ -74,3 +74,11 @@ header{
     max-width: 100%;
     height: auto;
 }
+
+footer{
+    background-color: var(--primary);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
