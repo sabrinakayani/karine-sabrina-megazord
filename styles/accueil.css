@@ -31,14 +31,7 @@
     color: white;
 }
 
-.txtAccueil button{
-    color:white;
-    font-size: 25px;
-    background-color: var(--primary);
-    border-color: var(--primary-alt);
-    border-radius:6px;
-    padding-bottom:5px;
-}
+
 
 @media (max-width:750px){
     .txtAccueil h1{
