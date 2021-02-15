@@ -67,7 +67,7 @@
 
   .card-title{
     font-family: var(--title);
-    color: var(--secondary-alt);
+    color: var(--secondary);
     font-size: 40px;
   }
 
@@ -79,4 +79,5 @@
   .membres .btnPlusAccueil{
       width:100%;
       border-radius:6px;
+      border-width: 0px;
   }
