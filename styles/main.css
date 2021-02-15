@@ -74,3 +74,11 @@ header{
     max-width: 100%;
     height: auto;
 }
+
+.navbar{
+    background-color: var(--primary);
+    position: sticky;
+    width: 100%;
+    top: 0;
+  }
+
