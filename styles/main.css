@@ -19,11 +19,6 @@
     box-sizing: border-box;
 }
 
-
-html, body {
-    height: 100%;
-  }
-
 .titre{
     font-family: var(--title);
   }
@@ -77,8 +72,5 @@ header{
 
 .navbar{
     background-color: var(--primary);
-    position: sticky;
-    width: 100%;
-    top: 0;
   }
 
