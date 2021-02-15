@@ -19,11 +19,6 @@
     box-sizing: border-box;
 }
 
-
-html, body {
-    height: 100%;
-  }
-
 .titre{
     font-family: var(--title);
   }
@@ -75,10 +70,10 @@ header{
     height: auto;
 }
 
-footer{
+.navbar{
     background-color: var(--primary);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    
-}
+  }
+
+  footer{
+      width:100%;
+  }
