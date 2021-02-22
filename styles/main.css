@@ -31,7 +31,7 @@
 
 @media (orientation:landscape){
     header{
-    height: 56.25%;
+    height: 56.25vw;
     }
 }
 
