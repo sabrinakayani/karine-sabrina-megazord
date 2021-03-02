@@ -100,3 +100,19 @@ header{
     padding-bottom:5px;
 }
 
+.git{
+    text-decoration: none;
+    color: white;
+}
+
+.git:hover{
+    color: #CCDDE7;
+}
+
+.git:active{
+    color: #CCDDE7;
+}
+
+.git:focus{
+    color: #CCDDE7;
+}
