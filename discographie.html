@@ -208,24 +208,53 @@
     </main>
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-0 text-center text-lg-start ">
-                    <p text-lg-left>Karine Cormier</p>
-                </div>
-                <div class="col-lg-6 order-lg-2 text-center text-lg-start ">
-                    <p>Sabrina Kayani</p>
-                </div>
-                <div class="col-lg-6 order-lg-1 text-center text-lg-end">
-                    <a href="https://github.com/sabrinakayani/karine-sabrina-megazord"
-                        class="git">https://github.com/sabrinakayani/karine-sabrina-megazord</a>
-                </div>
-                <div class="col-lg-6 order-lg-3 text-center text-lg-end ">
-                    <p>©2021</p>
-                </div>
+          <div class="row">
+            <div class="col-lg-6 order-lg-0 text-center text-lg-start ">
+              <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalKarine" class="creatrice">Karine Cormier</a>
             </div>
+            <div class="col-lg-6 order-lg-2 text-center text-lg-start ">
+              <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalSabrina" class="creatrice">Sabrina Kayani</a>
+            </div>
+            <div class="col-lg-6 order-lg-1 text-center text-lg-end">
+              <a href="https://github.com/sabrinakayani/karine-sabrina-megazord"
+                class="git">https://github.com/sabrinakayani/karine-sabrina-megazord</a>
+            </div>
+            <div class="col-lg-6 order-lg-3 text-center text-lg-end ">
+              <p>©2021</p>
+            </div>
+          </div>
         </div>
         </div>
-    </footer>
+      </footer>
+    
+    <div class="modal fade" id="modalKarine" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Karine Cormier</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img class="imgCreatrice" src="img/lateral.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal fade" id="modalSabrina" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Sabrina Kayani</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <img class="imgCreatrice" src="img/lateral.png">
+            </div>  
+          </div>
+        </div>
+      </div>
+
     <script src="scripts/main.js"></script>
     <script src="scripts/discographie.js"></script>
 </body>
