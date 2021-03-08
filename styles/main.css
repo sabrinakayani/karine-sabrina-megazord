@@ -74,11 +74,11 @@ header{
   }
 
   footer{
-      margin-top:20px;
+      margin-top: 20px;
       padding-top: 20px;
-      width:100%;
+      width: 100%;
       bottom:0;
-      background-color:var(--primary);
+      background-color: var(--primary);
       color:white;
   }
 
@@ -96,8 +96,8 @@ header{
     color: white;
     background-color: var(--primary);
     border-color: var(--primary-alt);
-    border-radius:6px;
-    padding-bottom:5px;
+    border-radius: 6px;
+    padding-bottom: 5px;
 }
 
 .git{
@@ -115,4 +115,36 @@ header{
 
 .git:focus{
     color: #CCDDE7;
+}
+
+.creatrice { 
+    text-decoration: none;
+    color: white;
+ }
+
+.creatrice:hover { 
+    color: #CCDDE7;
+}
+
+.creatrice:active{
+    color: #CCDDE7;
+}
+
+.creatrice:focus{
+    color: #CCDDE7;
+}
+
+.modal-title{
+    font-family: var(--title);
+}
+
+.btn-close{
+    color: var(--primary);
+}
+
+.imgCreatrice{
+    width:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
