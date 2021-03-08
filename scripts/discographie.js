@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.headerDisco .swiper-container', {
     effect: 'fade',
     direction: 'vertical',
     loop: true,
