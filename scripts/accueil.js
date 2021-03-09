@@ -1,6 +1,7 @@
-
-var swiper = new Swiper('.imgPromo .swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+var swiperAccueil = new Swiper('.imgPromo .swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+       type: 'bullets',
+    clickable:'true'
+  },
+});
