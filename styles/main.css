@@ -165,12 +165,36 @@ iframe {
 
 .video{
     position: relative;
-    color: var(--secondary);
-    font-family: var(--title);
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.video h3{
-    font-size: 40px;
+.titreSection{
+    font-size: 50px;
+    color: var(--secondary);
+    font-family: var(--title);
 }
+
+.modal-title{
+    color: var(--secondary);
+    font-family: var(--title);
+}
+
+.modal-content{
+    border-radius: 20px;
+    background-color: #FDFDFC;
+    padding:5%;
+}
+
+.btn-close{
+    color: var(--primary-alt);
+}
+.modal-header{
+    border-style: none;
+    padding-top: 5%;
+}
+
+.modal-title{
+    padding-left: 26%;
+}
+
