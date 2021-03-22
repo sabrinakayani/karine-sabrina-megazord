@@ -31,8 +31,6 @@
     color: white;
 }
 
-
-
 @media (max-width:750px){
     .txtAccueil h1{
         font-size: 75px;
@@ -102,18 +100,18 @@
   
   .imgPromo .swiper-slide img{
     object-fit: contain;
-    width:100%;
+    width: 100%;
   }
 
 .swiper-pagination-bullet{
   background-color: var(--secondary-alt);
-  opacity:100%;
+  opacity: 100%;
 }
 
 .swiper-pagination-bullet-active{
   background-color: var(--primary-alt);
-  width:10px;
-  height:10px;
+  width: 10px;
+  height: 10px;
 }
 
 .btn-close{
