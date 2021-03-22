@@ -9,22 +9,26 @@ var swiperAccueil = new Swiper('.imgPromo .swiper-container', {
 gsap.registerPlugin(ScrollTrigger);
 
 
+//SCROLL ANIMATION GSAP
 const sectionsList = document.querySelectorAll('.section');
 
 sectionsList.forEach(section =>{
-  const titres = document.querySelectorAll('.titreSection');
+  const titre = document.querySelectorAll('.titreSection');
 
   gsap.timeline({
-    scrollTrigger:{
+    scrollTrigger: {
       markers: true,
       toggleActions: "play none none reverse",
       trigger: section,
     }
   })
-  .fromTo(titres, {
-    opacity:0,
+  .fromTo(titre, {
+    opacity: 0,
+    fontSize: 0,
   },
   {
-    opacity:1,
+    opacity: 1,
+    fontSize: 50,
+    duration:1,
   })
 });
