@@ -74,6 +74,21 @@
     font-size: 20px;
 }
 
+.imgAlbumPair{
+    margin-top:20px ;
+}
+
+.txtAlbumPair h3{
+    font-family: var(--title);
+    color: var(--secondary);
+    font-size: 30px;
+}
+
+.txtAlbumPair ol{
+    font-family: var(--regular);
+    font-size: 20px;
+}
+
 
 @media (min-width:576px){
     .album{
@@ -88,4 +103,8 @@
 .album .btnPlus{
     border-radius:6px;
     border-width: 0px;
+}
+
+.lateral{
+    z-index: 10;
 }
