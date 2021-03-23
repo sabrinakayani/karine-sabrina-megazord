@@ -8,19 +8,20 @@ var swiperAccueil = new Swiper('.imgPromo .swiper-container', {
 
 gsap.registerPlugin(ScrollTrigger);
 //SCROLL ANIMATION GSAP
-const bannersList= document.querySelectorAll('.bannerAccueil');
+const sectionsList= document.querySelectorAll('.section');
 
-bannersList.forEach(banner =>{
-  const titre = banner.querySelectorAll('.titreAccueil');
-  const carte =  banner.querySelectorAll('.card');
-  const sectionPromo =  banner.querySelector('.swiper-container');
-  const sectionVideo =  banner.querySelector('.youtube');
+sectionsList.forEach(section =>{
+  const titre = section.querySelectorAll('.titreAccueil');
+  const carte =  section.querySelectorAll('.card');
+  const sectionPromo =  section.querySelector('.swiper-container');
+  const sectionVideo =  section.querySelector('.youtube');
 
   gsap.timeline({
     scrollTrigger: {
       markers: false,
       toggleActions: "play none none reverse",
-      trigger: banner,
+      trigger: section,
+      start: 'top 50%',
     }
   })
   .fromTo(titre, {
@@ -30,46 +31,36 @@ bannersList.forEach(banner =>{
   {
     fontSize: 50,
     opacity: 1,
-    duration: 1,
     ease: "none",
   })
 
   .fromTo(carte, {
     opacity: 0,
     scale: 0.1,
-    y: "+=100"
   },
   {
-    y:0,
     scale: 1,
     opacity: 1,
-    duration: 1,
     ease: "none",
   })
 
   .fromTo(sectionPromo, {
     opacity: 0,
     scale: 0.1,
-    y: "+=100"
   },
   {
-    y:0,
     scale: 1,
     opacity: 1,
-    duration: 1,
     ease: "none",
   })
 
   .fromTo(sectionVideo, {
     opacity: 0,
     scale: 0.1,
-    y: "+=100"
   },
   {
-    y: 0,
     scale: 1,
     opacity: 1,
-    duration: 1,
     ease: "none",
   })
 });
