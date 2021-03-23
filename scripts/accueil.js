@@ -11,14 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const bannersList= document.querySelectorAll('.bannerAccueil');
 
 bannersList.forEach(banner =>{
-  const titre = banner.querySelectorAll('.titreSection');
+  const titre = banner.querySelectorAll('.titreAccueil');
   const carte =  banner.querySelectorAll('.card');
   const sectionPromo =  banner.querySelector('.swiper-container');
   const sectionVideo =  banner.querySelector('.youtube');
 
   gsap.timeline({
     scrollTrigger: {
-      markers: true,
+      markers: false,
       toggleActions: "play none none reverse",
       trigger: banner,
     }
