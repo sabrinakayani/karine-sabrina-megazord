@@ -14,6 +14,10 @@ const sectionsList = document.querySelectorAll('.section');
 
 sectionsList.forEach(section =>{
   const titre = document.querySelectorAll('.titreSection');
+  const carte = document.querySelectorAll('.card');
+  const sectionMembres = document.querySelectorAll('.membres');
+  const sectionPromo = document.querySelector('.imgPromo');
+  const sectionVideo = document.querySelector('.video');
 
   gsap.timeline({
     scrollTrigger: {
@@ -24,11 +28,48 @@ sectionsList.forEach(section =>{
   })
   .fromTo(titre, {
     opacity: 0,
-    fontSize: 0,
+    x: -200,
   },
   {
+    x:0,
     opacity: 1,
-    fontSize: 50,
-    duration:1,
+    duration: 1,
+    ease: "none",
+  })
+  .fromTo(carte, {
+    opacity: 0,
+    scale:0.1,
+    y:"+=100"
+  },
+  {
+    y:0,
+    scale:1,
+    opacity: 1,
+    duration: 1,
+    ease: "none",
+  })
+  .fromTo(sectionPromo, {
+    opacity: 0,
+    scale:0.1,
+  
+  },
+  {
+    y:0,
+    scale:1,
+    opacity: 1,
+    duration: 1,
+    ease: "none",
+  })
+  .fromTo(sectionVideo, {
+    opacity: 0,
+    scale:0.1,
+  
+  },
+  {
+    y:0,
+    scale:1,
+    opacity: 1,
+    duration: 1,
+    ease: "none",
   })
 });
