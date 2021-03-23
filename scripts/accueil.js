@@ -1,73 +1,73 @@
 var swiperAccueil = new Swiper('.imgPromo .swiper-container', {
   pagination: {
     el: '.swiper-pagination',
-       type: 'bullets',
+    type: 'bullets',
     clickable:'true'
   },
 });
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 //SCROLL ANIMATION GSAP
-const sectionsList = document.querySelectorAll('.section');
+const bannersList= document.querySelectorAll('.bannerAccueil');
 
-sectionsList.forEach(section =>{
-  const titre = document.querySelectorAll('.titreSection');
-  const carte = document.querySelectorAll('.card');
-  const sectionMembres = document.querySelectorAll('.membres');
-  const sectionPromo = document.querySelector('.imgPromo');
-  const sectionVideo = document.querySelector('.video');
+bannersList.forEach(banner =>{
+  const titre = banner.querySelectorAll('.titreSection');
+  const carte =  banner.querySelectorAll('.card');
+  const sectionPromo =  banner.querySelector('.swiper-container');
+  const sectionVideo =  banner.querySelector('.youtube');
 
   gsap.timeline({
     scrollTrigger: {
       markers: true,
       toggleActions: "play none none reverse",
-      trigger: section,
+      trigger: banner,
     }
   })
   .fromTo(titre, {
     opacity: 0,
-    x: -200,
+    fontSize: 0,
   },
   {
-    x:0,
+    fontSize: 50,
     opacity: 1,
     duration: 1,
     ease: "none",
   })
+
   .fromTo(carte, {
     opacity: 0,
-    scale:0.1,
-    y:"+=100"
+    scale: 0.1,
+    y: "+=100"
   },
   {
     y:0,
-    scale:1,
+    scale: 1,
     opacity: 1,
     duration: 1,
     ease: "none",
   })
+
   .fromTo(sectionPromo, {
     opacity: 0,
-    scale:0.1,
-  
+    scale: 0.1,
+    y: "+=100"
   },
   {
     y:0,
-    scale:1,
+    scale: 1,
     opacity: 1,
     duration: 1,
     ease: "none",
   })
+
   .fromTo(sectionVideo, {
     opacity: 0,
-    scale:0.1,
-  
+    scale: 0.1,
+    y: "+=100"
   },
   {
-    y:0,
-    scale:1,
+    y: 0,
+    scale: 1,
     opacity: 1,
     duration: 1,
     ease: "none",
