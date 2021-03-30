@@ -52,3 +52,31 @@ sectionList.forEach(section => {
       scale: 0,
     }, "0")
 });
+
+
+const polaroid = document.querySelector('.spriteDiscographie');
+let timeOut;
+
+gsap.to("main", {
+  scrollTrigger: {
+    trigger: 'main',
+    onUpdate: (e) => {
+      clearTimeout(timeOut);
+      timeOut = setTimeout(() => {
+        polaroid.classList.remove('scroll-down');
+        polaroid.classList.remove('scroll-up');
+        polaroid.classList.add('attente');
+      }, 500)
+      if (e.direction == 1) {
+        polaroid.classList.add('scroll-down');
+        polaroid.classList.remove('scroll-up');
+        polaroid.classList.remove('attente');
+      }
+      else {
+        polaroid.classList.remove('scroll-down');
+        polaroid.classList.add('scroll-up');
+        polaroid.classList.remove('attente');
+      }
+    },
+  },
+});
