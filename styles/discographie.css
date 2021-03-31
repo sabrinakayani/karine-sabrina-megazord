@@ -57,6 +57,7 @@
 .album{
     margin-top:20px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .imgAlbum{
@@ -105,18 +106,15 @@
     border-width: 0px;
 }
 
-.lateral{
-    z-index: 10;
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .spriteContainerDiscographie{
     width: 100%;
-    height: 0;
+    position: sticky;
+    top: 50%;
 }
+
+
 .spriteDiscographie{
+    z-index: 10;
     animation-name: spriteAnimation;
     background-size:100%;
     background-position: 0 0;
@@ -124,7 +122,6 @@
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(24);
-    
 }
   
 @keyframes spriteAnimation{
