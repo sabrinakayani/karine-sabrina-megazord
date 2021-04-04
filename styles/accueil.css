@@ -137,8 +137,8 @@
 }
 
 .cassetteContainer{
-  width:100%;
   position:sticky;
+  width:100%;
   top:50%;
 }
 .spriteCassette{
