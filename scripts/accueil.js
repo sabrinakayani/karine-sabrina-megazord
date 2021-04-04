@@ -64,3 +64,30 @@ sectionsList.forEach(section =>{
     ease: "none",
   })
 });
+
+const cassette = document.querySelector('.spriteCassette');
+let timeout;
+
+gsap.to("main", {
+  scrollTrigger: {
+    trigger: 'main',
+    onUpdate: (e) => {
+      clearTimeout(timeout);
+      timeOut = setTimeout(() =>{
+        cassette.classList.remove('scrollHaut');
+        cassette.classList.remove('scrollBas');
+        cassette.classList.add('idle');
+      },500)
+      if (e.direction == 1){
+        cassette.classList.remove('scrollHaut');
+        cassette.classList.add('scrollBas');
+        cassette.classList.remove('idle');
+      }
+      else{
+        cassette.classList.add('scrollHaut');
+        cassette.classList.remove('scrollBas');
+        cassette.classList.remove('idle');
+      }
+    },
+  },
+});
