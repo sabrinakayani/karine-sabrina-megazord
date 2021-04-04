@@ -135,3 +135,35 @@
     opacity: 1;
 
 }
+
+.cassetteContainer{
+  width:100%;
+  position:sticky;
+  top:50%;
+}
+.spriteCassette{
+  padding-bottom: 100%;
+  animation-name: cassetteAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(30);
+  background-size: 100%;
+ }
+
+ @keyframes cassetteAnimation{
+  from { background-position: 0 0; }
+  to { background-position: 0 103.44%; }
+}
+
+.idle{
+  background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349937292017684/animation_idle_accueil.png);
+}
+
+.scrollHaut{
+  background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349936143433758/animation_haut_accueil.png);
+} 
+
+.scrollBas{
+ background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349931538219048/animation_bas_accueil.png);
+}
+
