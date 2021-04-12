@@ -70,6 +70,8 @@ let timeout;
 
 gsap.to("main", {
   scrollTrigger: {
+    scrub: true,
+    markers: false,
     trigger: 'main',
     onUpdate: (e) => {
       clearTimeout(timeout);
