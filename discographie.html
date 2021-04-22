@@ -67,6 +67,10 @@
                     <li class="nav-item">
                         <a href="discographie.html" class="nav-link active">Discographie</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalQuiz"
+                            class="quiz nav-link">Quiz</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -265,7 +269,36 @@
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="modalQuiz" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content quizContent">
+                <div class="modal-header quizHeader">
+                    <h2 class="modal-title border-0 quizTitle">Quiz Day6</h2>
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalQuiz">
+                    <div class="quizMauvais"><img src="https://i.imgur.com/iYPa6Pn.png" class="neutre" />
+                        <p class="texteMauvais"> OUPS </p>
+                        <img src="https://cdn.discordapp.com/attachments/623289176531402752/834873445086789694/output-onlinepngtools_1.png"
+                            class="mauvais" />
+                        <div class="cercleMauvais">
+                            <img class="imgMauvais"
+                                src="https://cdn.discordapp.com/attachments/623289176531402752/821855099592507452/kisspng-every-day6-march-k-pop-every-day6-january-jae-day6-drawing-5b5b065c6b81d2.522942731532692060.png" />
+                        </div>
+                    </div>
+                    <div class="quizBonne"><img src="https://i.imgur.com/iYPa6Pn.png" class="originale" />
+                        <p class="txtBonne"> BRAVO </p>
+                        <img src="https://cdn.discordapp.com/attachments/623289176531402752/821855559372374026/output-onlinepngtools_2.png"
+                            class="bonne" />
+                        <div class="containerBonne">
+                            <img class="bonneImg"
+                                src="https://i.pinimg.com/originals/c8/d4/06/c8d406c02a594bf7154073473486effb.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="scripts/main.js"></script>
     <script src="scripts/discographie.js"></script>
 </body>
