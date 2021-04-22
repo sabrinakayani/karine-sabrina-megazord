@@ -107,12 +107,71 @@ const tableauQuiz = [
     {
       opacity: 0,
       duration: 0.1,
-      onComplete: function () {
-        console.log("Fini");
-      }
     }, "=+0.5"
   );
   tlMauvais.pause();
+  let tlBonne =  gsap.timeline()
+.fromTo(
+   ".originale", { 
+     opacity: 0,
+  },
+    {
+     opacity: 1,
+     duration: 0.2,
+     ease: "none",
+    }
+)
+  .fromTo(
+   ".originale", { 
+     rotation: 0,
+  },
+    {
+     duration: 1.3, 
+     rotation: 720,
+     ease: "none",
+    }
+  )
+  .fromTo(
+   ".bonne",{
+      opacity: 0,
+      rotation: 0,
+   },
+    {
+     opacity: 1,
+     duration: 1.3,
+     rotation: 720,
+     ease: "none",
+    
+  }, "<")
+  .fromTo(
+   ".bonneImg",{
+     height: 0,
+   },
+    {
+     duration: 0.5,
+     height: 250,
+     ease: "bounce.out",
+  })
+  .fromTo(
+   ".txtBonne",{
+     fontSize: 0,
+   },
+    {
+     duration: 0.5,
+     fontSize: 40,
+     ease: "bounce.out",
+  }, "<")
+
+  .fromTo(
+   ".quizBonne",{ 
+     opacity: 1,
+   },
+    {
+     duration: 0.1,
+     opacity: 0,
+   }, "=+0.5");
+  
+tlBonne.pause();
   class Quiz {
     constructor(settings) {
       this.index = 0;
@@ -225,55 +284,7 @@ const tableauQuiz = [
     }
   goodAnswer(){
     this.score++;
-    gsap.fromTo(
-      ".originale", { 
-        opacity: 1,
-        duration: 0.2,
-        rotation: 0,
-     },
-       {
-        delay: 0.2,
-        duration: 1.3, 
-        rotation: 720,
-        ease: "none",
-       }
-     ); 
-     
-     //ANIMATION IMG BONNE
-     gsap.from(
-      ".bonne",{
-        opacity: 0,
-        duration: 1.3,
-        delay: 0.2,
-        rotation: -720,
-        ease: "none",
-     });
-     
-     //ANIMATION SUNGJIN
-     gsap.from(
-      ".bonneImg",{
-        duration: 0.5,
-        height: 0,
-        delay: 1.5,
-        ease: "bounce.out",
-     });
-     
-     //ANIMATION BRAVO
-     gsap.from(
-      ".txtBonne",{
-        duration: 0.5,
-        fontSize: 0,
-        delay: 1.5,
-        ease: "bounce.out",
-     });
-     
-     //ANIMATION QUIZ
-     gsap.from(
-      ".quizBonne",{
-        duration: 0.1,
-        opacity: 1,
-        delay: 2.9,
-      });
+    tlBonne.play(0);
   }
   wrongAnswer(){
     tlMauvais.play(0);
