@@ -6,7 +6,7 @@
 :root{
     --title: 'Lobster', cursive;
     --regular: 'Roboto', sans-serif;
-    --bg:#CCDDE7;
+    --bg:#ffffff;
     --text:#0000;
     --primary:#F0ADBA;
     --primary-alt:#D29AA3;
@@ -56,6 +56,7 @@ main{
     height: 100%;
     position: relative;
     width: 100%;
+    background-color: var(--bg);
 }
 
 header{
