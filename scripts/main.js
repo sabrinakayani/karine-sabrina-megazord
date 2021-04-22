@@ -62,6 +62,57 @@ const tableauQuiz = [
 
   let i;
   let modal = document.querySelector(".modalQuiz");
+  let tlMauvais =  gsap.timeline().
+  fromTo(
+    ".neutre",
+    { opacity: 0, },
+    { opacity: 1, ease: "none", duration: 0.2,})
+    .fromTo(
+      ".neutre",
+      { rotationY: 0, },
+    { duration: 1.3, rotationY: 720, ease: "none" },)
+  .fromTo(
+    ".mauvais",
+    {
+      rotationY: 0,
+      opacity: 0, 
+    },
+    { rotationY: 720, 
+     duration: 1.3,
+     opacity: 1, 
+     ease: "none" },"<")
+  .fromTo(
+    ".imgMauvais",
+    {
+      height: 0,
+    },
+    {
+      height: 200,
+      duration: 0.5,
+    }, )
+  .fromTo(
+    ".texteMauvais",
+    {
+      fontSize: 0
+    },
+    {
+      fontSize: 40,
+      duration: 0.5
+    }, "<")
+  .fromTo(
+    ".quizMauvais",
+    {
+      opacity: 1,
+    },
+    {
+      opacity: 0,
+      duration: 0.1,
+      onComplete: function () {
+        console.log("Fini");
+      }
+    }, "=+0.5"
+  );
+  tlMauvais.pause();
   class Quiz {
     constructor(settings) {
       this.index = 0;
@@ -225,59 +276,7 @@ const tableauQuiz = [
       });
   }
   wrongAnswer(){
-    gsap.fromTo(
-          ".neutre",
-          { opacity: 0, },
-          { opacity: 1, ease: "none", duration: 0.2, delay:0});
-          gsap.fromTo(
-            ".neutre",
-            { rotationY: 0, },
-          { duration: 1.3, rotationY: 720, delay: 0.2, ease: "none" });
-        gsap.fromTo(
-          ".mauvais",
-          {
-            rotationY: 0,
-            opacity: 0, 
-          },
-          { rotationY: 720, 
-           duration: 1.3,
-           opacity: 1, 
-           delay: 0.2, 
-           ease: "none" }
-        );
-        gsap.fromTo(
-          ".imgMauvais",
-          {
-            height: 0,
-          },
-          {
-            height: 200,
-            duration: 0.5,
-            delay: 1.5
-          }
-        );
-        gsap.fromTo(
-          ".texteMauvais",
-          {
-            fontSize: 0
-          },
-          {
-            fontSize: 40,
-            duration: 0.5,
-            delay: 1.5
-          }
-        );
-        gsap.fromTo(
-          ".quizMauvais",
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            duration: 0.1,
-            delay: 2.9,
-          }
-        );
+    tlMauvais.play(0);
   }
   }
   new Quiz(tableauQuiz);
