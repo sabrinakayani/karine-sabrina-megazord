@@ -59,7 +59,9 @@ const tableauQuiz = [
       r: 3
     }
   ];
+
   let i;
+  let modal = document.querySelector(".modalQuiz");
   class Quiz {
     constructor(settings) {
       this.index = 0;
@@ -76,13 +78,12 @@ const tableauQuiz = [
       this.setVisible();
     }
     creerHTML() {
-      let linebreak = document.createElement("br");
       let div = document.createElement("div");
       div.classList.add("question");
       let strong = document.createElement("strong");
       let q = document.createElement("label");
       q.innerText = this.questions;
-      document.body.appendChild(div);
+      modal.appendChild(div);
       div.appendChild(strong);
       strong.appendChild(q);
       if (this.o1 !== null) {
@@ -146,8 +147,115 @@ const tableauQuiz = [
       if (choixReponse == this.answer) {
         this.score++;
         console.log("Bonne Réponse : pointage " + this.score);
+        gsap.fromTo(
+          ".originale", { 
+            opacity: 1,
+            duration: 0.2,
+            rotation: 0,
+         },
+           {
+            delay: 0.2,
+            duration: 1.3, 
+            rotation: 720,
+            ease: "none",
+           }
+         ); 
+         
+         //ANIMATION IMG BONNE
+         gsap.from(
+          ".bonne",{
+            opacity: 0,
+            duration: 1.3,
+            delay: 0.2,
+            rotation: -720,
+            ease: "none",
+         });
+         
+         //ANIMATION SUNGJIN
+         gsap.from(
+          ".bonneImg",{
+            duration: 0.5,
+            height: 0,
+            delay: 1.5,
+            ease: "bounce.out",
+         });
+         
+         //ANIMATION BRAVO
+         gsap.from(
+          ".txtBonne",{
+            duration: 0.5,
+            fontSize: 0,
+            delay: 1.5,
+            ease: "bounce.out",
+         });
+         
+         //ANIMATION QUIZ
+         gsap.from(
+          ".quizBonne",{
+            duration: 0.1,
+            opacity: 1,
+            delay: 2.9,
+            onComplete:function(){console.log("Fini!")},
+          });
+         
       } else {
         console.log("Mauvaise Réponse : pointage " + this.score);
+        gsap.fromTo(
+          ".neutre",
+          { opacity: 0, },
+          { opacity: 1, ease: "none", duration: 0.2, delay:0});
+          gsap.fromTo(
+            ".neutre",
+            { rotationY: 0, },
+          { duration: 1.3, rotationY: 720, delay: 0.2, ease: "none" });
+        gsap.fromTo(
+          ".mauvais",
+          {
+            rotationY: 0,
+            opacity: 0, 
+          },
+          { rotationY: 720, 
+           duration: 1.3,
+           opacity: 1, 
+           delay: 0.2, 
+           ease: "none" }
+        );
+        gsap.fromTo(
+          ".imgMauvais",
+          {
+            height: 0,
+          },
+          {
+            height: 200,
+            duration: 0.5,
+            delay: 1.5
+          }
+        );
+        gsap.fromTo(
+          ".texteMauvais",
+          {
+            fontSize: 0
+          },
+          {
+            fontSize: 40,
+            duration: 0.5,
+            delay: 1.5
+          }
+        );
+        gsap.fromTo(
+          ".quizMauvais",
+          {
+            opacity: 1,
+          },
+          {
+            opacity: 0,
+            duration: 0.1,
+            delay: 2.9,
+            onComplete: function () {
+              console.log("Fini");
+            }
+          }
+        );
       }
       if (this.index < 8) {
         this.index++;
@@ -157,3 +265,4 @@ const tableauQuiz = [
   }
   new Quiz(tableauQuiz);
   
+
