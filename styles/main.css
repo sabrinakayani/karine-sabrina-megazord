@@ -220,4 +220,125 @@ iframe {
 
   }
 
+  .quizMauvais{
+    opacity:0;
+  }
+
+  .neutre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) rotateY(0deg);
+    width: 200px;
+    height: 200px;
+  }
   
+  .mauvais{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) rotateY(0deg);
+    width: 200px;
+    height: 200px;
+    z-index:2;
+  }
+  
+  .cercleMauvais{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index:3;
+    border-radius: 50%;
+    object-fit: contain;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .imgMauvais{
+    top: 50%;
+    left: 50%;
+    height:0px;
+    transform:translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+    content: " ";
+    position: relative;
+  }
+  
+  .texteMauvais{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:0px;
+    transform:scale(1) translate(-50%,20%);
+    font-family:'Roboto', sans-serif;
+    font-weight:800;
+    color:red;
+    z-index:5;
+  }
+
+
+  .originale{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+  }
+  
+  .bonne{
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    z-index:2;
+    transform: translate(-50%,-50%);
+  }
+  
+  .containerBonne{
+    position: absolute;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    transform: translate(-50%,-50%) ;
+    border-radius:50%;
+      overflow: hidden;
+      display: block;
+  }
+  
+  .bonneImg{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    border-radius: 50%;
+    content: " ";
+    z-index: -1;
+    transform:translate(-50%,-50%) ;
+  }
+  
+  .txtBonne{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: green;
+    z-index: 4;
+    transform: scale(1) translate(-50%,-5%);
+  }
+  
+  .quizBonne{
+    opacity:0;
+  }
