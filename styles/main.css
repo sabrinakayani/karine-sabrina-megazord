@@ -199,3 +199,24 @@ iframe {
     padding-left: 26%;
 }
 
+.question{
+    display:none;
+  }
+  
+  .is-visible{
+    display:block;
+  }
+
+  .quizHeader{
+    background-color: var(--primary);
+    border-radius: 20px;
+    padding:1%;
+  }
+
+  .quizTitle{
+      color:white;
+     font-size:4vw;
+
+  }
+
+  
