@@ -176,7 +176,7 @@ iframe {
     font-family: var(--title);
 }
 
-.modal-title{
+.titleCreatrice{
     color: var(--secondary);
     font-family: var(--title);
 }
@@ -215,13 +215,17 @@ iframe {
 
   .quizTitle{
     color:white;
-    font-size:3vw;
-    padding-left:11vw;
+    font-size:40px;
+    padding-left:30%;
 
   }
 
   .quizMauvais{
-    opacity:0;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
   }
 
   .neutre{
@@ -237,7 +241,7 @@ iframe {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%) rotateY(0deg);
+    transform: translate(-50%,-50%) rotateY(0deg);
     width: 200px;
     height: 200px;
     z-index:2;
@@ -249,8 +253,8 @@ iframe {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
-    z-index:3;
+    transform: translate(-50%,-50%);
+    z-index: 3;
     border-radius: 50%;
     object-fit: contain;
     overflow: hidden;
@@ -312,8 +316,8 @@ iframe {
     z-index: 3;
     transform: translate(-50%,-50%) ;
     border-radius:50%;
-      overflow: hidden;
-      display: block;
+    overflow: hidden;
+    display: block;
   }
   
   .bonneImg{
@@ -341,4 +345,8 @@ iframe {
   
   .quizBonne{
     opacity:0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
   }
+
