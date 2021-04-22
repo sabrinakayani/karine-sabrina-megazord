@@ -137,70 +137,95 @@ const tableauQuiz = [
     }
     setVisible() {
       const questions = document.querySelectorAll(".question");
-      questions.forEach(function (question, index, array) {
+      questions.forEach(function (question) {
         question.classList.remove("is-visible");
       });
       questions[this.index].classList.add("is-visible");
+     
+      
     }
     change(choixReponse) {
+      const questions = document.querySelectorAll(".question");
       this.answer = this.settings[this.index].r;
       if (choixReponse == this.answer) {
-        this.score++;
-        console.log("Bonne Réponse : pointage " + this.score);
-        gsap.fromTo(
-          ".originale", { 
-            opacity: 1,
-            duration: 0.2,
-            rotation: 0,
-         },
-           {
-            delay: 0.2,
-            duration: 1.3, 
-            rotation: 720,
-            ease: "none",
-           }
-         ); 
-         
-         //ANIMATION IMG BONNE
-         gsap.from(
-          ".bonne",{
-            opacity: 0,
-            duration: 1.3,
-            delay: 0.2,
-            rotation: -720,
-            ease: "none",
-         });
-         
-         //ANIMATION SUNGJIN
-         gsap.from(
-          ".bonneImg",{
-            duration: 0.5,
-            height: 0,
-            delay: 1.5,
-            ease: "bounce.out",
-         });
-         
-         //ANIMATION BRAVO
-         gsap.from(
-          ".txtBonne",{
-            duration: 0.5,
-            fontSize: 0,
-            delay: 1.5,
-            ease: "bounce.out",
-         });
-         
-         //ANIMATION QUIZ
-         gsap.from(
-          ".quizBonne",{
-            duration: 0.1,
-            opacity: 1,
-            delay: 2.9,
-            onComplete:function(){console.log("Fini!")},
-          });
-         
+        this.goodAnswer();  
       } else {
-        console.log("Mauvaise Réponse : pointage " + this.score);
-        gsap.fromTo(
+        this.wrongAnswer();
+      }
+      if (this.index <= 6) {
+        ++this.index;
+        this.setVisible();
+      }else{
+        questions[this.index].classList.remove("is-visible");
+        let divModal = document.createElement("div");
+        let strongModal = document.createElement("strong");
+        let pointage = document.createElement("label");
+        let score = document.createElement("p");
+        divModal.style.textAlign = "center"; 
+        score.style.fontSize = "40px";
+        pointage.innerText = "Pointage:";
+        score.innerText = this.score + "/8";
+        modal.appendChild(divModal);
+        divModal.appendChild(pointage);
+        strongModal.appendChild(score);
+        pointage.appendChild(document.createElement("br"));
+        pointage.appendChild(strongModal);
+      }
+    }
+  goodAnswer(){
+    this.score++;
+    gsap.fromTo(
+      ".originale", { 
+        opacity: 1,
+        duration: 0.2,
+        rotation: 0,
+     },
+       {
+        delay: 0.2,
+        duration: 1.3, 
+        rotation: 720,
+        ease: "none",
+       }
+     ); 
+     
+     //ANIMATION IMG BONNE
+     gsap.from(
+      ".bonne",{
+        opacity: 0,
+        duration: 1.3,
+        delay: 0.2,
+        rotation: -720,
+        ease: "none",
+     });
+     
+     //ANIMATION SUNGJIN
+     gsap.from(
+      ".bonneImg",{
+        duration: 0.5,
+        height: 0,
+        delay: 1.5,
+        ease: "bounce.out",
+     });
+     
+     //ANIMATION BRAVO
+     gsap.from(
+      ".txtBonne",{
+        duration: 0.5,
+        fontSize: 0,
+        delay: 1.5,
+        ease: "bounce.out",
+     });
+     
+     //ANIMATION QUIZ
+     gsap.from(
+      ".quizBonne",{
+        duration: 0.1,
+        opacity: 1,
+        delay: 2.9,
+      });
+  }
+  wrongAnswer(){
+    gsap.fromTo(
           ".neutre",
           { opacity: 0, },
           { opacity: 1, ease: "none", duration: 0.2, delay:0});
@@ -251,17 +276,9 @@ const tableauQuiz = [
             opacity: 0,
             duration: 0.1,
             delay: 2.9,
-            onComplete: function () {
-              console.log("Fini");
-            }
           }
         );
-      }
-      if (this.index < 8) {
-        this.index++;
-        this.setVisible();
-      }
-    }
+  }
   }
   new Quiz(tableauQuiz);
   
