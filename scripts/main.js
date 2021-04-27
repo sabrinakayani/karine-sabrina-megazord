@@ -112,10 +112,7 @@ let tlBonne = gsap.timeline()
     }, "=+0.5");
 
 tlBonne.pause();
-/*
-fetch('https://day6.qc.lu/json/')
-.then(res => res.json())
-.then(data => console.log(data));*/
+
 var questionsList;
 fetch('https://day6.qc.lu/json/')
   .then(response => response.json())
