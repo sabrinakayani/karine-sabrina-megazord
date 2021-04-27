@@ -122,7 +122,6 @@ fetch('https://day6.qc.lu/json/')
   });
 
 function logDataset() {
-  console.log(questionsList);
   new Quiz(questionsList)
 }
 
