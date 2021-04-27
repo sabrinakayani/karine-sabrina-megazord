@@ -115,13 +115,13 @@ tlBonne.pause();
 
 let questionsList;
 fetch('https://day6.qc.lu/json/')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     questionsList = data.tableauQuiz;
-    logDataset();
+    createQuiz();
   });
 
-function logDataset() {
+function createQuiz() {
   new Quiz(questionsList)
 }
 
