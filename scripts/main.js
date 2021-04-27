@@ -112,18 +112,29 @@ let tlBonne = gsap.timeline()
     }, "=+0.5");
 
 tlBonne.pause();
-
-
-class Quiz {
-  constructor(settings) {
-    
+/*
 fetch('https://day6.qc.lu/json/')
 .then(res => res.json())
-.then(data => console.log(data));
+.then(data => console.log(data));*/
+var questionsList;
+fetch('https://day6.qc.lu/json/')
+  .then(response => response.json())
+  .then(data => {
+    questionsList = data.tableauQuiz;
+    logDataset();
+  });
+
+function logDataset() {
+  console.log(questionsList);
+  new Quiz(questionsList)
+}
+
+class Quiz {
+  constructor(questionsList) {
     this.index = 0;
     this.score = 0;
-    this.settings = settings;
-    for (i = 0; i < data.tableauQuiz.length; i++) {
+    this.settings = questionsList;
+    for (i = 0; i < questionsList.length; i++) {
       this.questions = this.settings[i].q;
       this.o1 = this.settings[i].o1;
       this.o2 = this.settings[i].o2;
@@ -237,6 +248,5 @@ fetch('https://day6.qc.lu/json/')
   }
 }
 
-  new Quiz(data.tableauQuiz);
 
 
