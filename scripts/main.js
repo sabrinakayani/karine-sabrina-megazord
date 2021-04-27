@@ -113,7 +113,7 @@ let tlBonne = gsap.timeline()
 
 tlBonne.pause();
 
-var questionsList;
+let questionsList;
 fetch('https://day6.qc.lu/json/')
   .then(response => response.json())
   .then(data => {
