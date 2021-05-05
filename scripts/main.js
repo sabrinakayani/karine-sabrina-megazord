@@ -122,7 +122,7 @@ fetch('https://day6.qc.lu/json/')
   });
 
 function createQuiz() {
-  new Quiz(questionsList)
+  new Quiz(questionsList);
 }
 
 class Quiz {
