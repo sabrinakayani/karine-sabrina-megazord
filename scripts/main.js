@@ -114,10 +114,10 @@ let tlBonne = gsap.timeline()
 tlBonne.pause();
 
 let questionsList;
-fetch('https://day6.qc.lu/json/')
+fetch('http://day6.qc.lu/day6-api/wp-json/wp/v2/posts')
   .then(res => res.json())
   .then(data => {
-    questionsList = data.tableauQuiz;
+    questionsList = data;
     createQuiz();
   });
 
@@ -131,11 +131,11 @@ class Quiz {
     this.score = 0;
     this.settings = questionsList;
     for (i = 0; i < questionsList.length; i++) {
-      this.questions = this.settings[i].q;
-      this.o1 = this.settings[i].o1;
-      this.o2 = this.settings[i].o2;
-      this.o3 = this.settings[i].o3;
-      this.o4 = this.settings[i].o4;
+      this.questions = this.settings[i].acf.q;
+      this.o1 = this.settings[i].acf.o1;
+      this.o2 = this.settings[i].acf.o2;
+      this.o3 = this.settings[i].acf.o3;
+      this.o4 = this.settings[i].acf.o4;
       this.creerHTML();
     }
     this.setVisible();
@@ -173,7 +173,7 @@ class Quiz {
       div.appendChild(label2);
       o2.addEventListener("click", () => this.change(2));
     }
-    if (this.o3 != null) {
+    if (this.o3 != "null") {
       let o3 = document.createElement("input");
       o3.setAttribute("type", "radio");
       o3.setAttribute("name", "question" + i);
@@ -185,7 +185,7 @@ class Quiz {
       div.appendChild(label3);
       o3.addEventListener("click", () => this.change(3));
     }
-    if (this.o4 != null) {
+    if (this.o4 != "null") {
       let o4 = document.createElement("input");
       o4.setAttribute("type", "radio");
       o4.setAttribute("name", "question" + i);
@@ -209,7 +209,7 @@ class Quiz {
   }
   change(choixReponse) {
     const questions = document.querySelectorAll(".question");
-    this.answer = this.settings[this.index].r;
+    this.answer = this.settings[this.index].acf.r;
     if (choixReponse == this.answer) {
       this.goodAnswer();
     } else {
