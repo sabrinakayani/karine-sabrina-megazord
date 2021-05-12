@@ -54,6 +54,17 @@
     }
 }
 
+@media (max-width:440px){
+    .txtDiscographie h1{
+        font-size: 60px;
+    }
+    .txtDiscographie p{
+        font-size: 20px;
+    }
+    .txtDiscographie button{
+        font-size: 15px;
+    }
+}
 .album{
     margin-top:20px;
     margin-bottom: 20px;
