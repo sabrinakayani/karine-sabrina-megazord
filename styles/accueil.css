@@ -1,1 +1,158 @@
 
+.heroAccueil img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    object-fit: cover;
+}
+
+/*pour voir young k*/
+.heroAccueil .imgPortrait { 
+    object-position: 0% 20%;
+}
+
+.contrasteAccueil{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(70, 70, 70);
+    opacity: 50%;
+}
+
+.txtAccueil h1{
+    font-size: 125px;
+    color: var(--primary);  
+}
+
+.txtAccueil p{
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width:750px){
+    .txtAccueil h1{
+        font-size: 75px;
+    }
+    .txtAccueil p{
+        font-size: 20px;
+    }
+
+    .txtAccueil button{
+        font-size: 15px;
+    }
+}
+
+.titreMembres{
+    color: black;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.card{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(202,247,248,1) 100%);
+    
+  }
+
+  .card-title{
+    font-family: var(--title);
+    color: var(--secondary);
+    font-size: 40px;
+    
+  }
+
+  .positionMembres{
+      font-weight: bold;
+      font-size: 20px;
+  }
+
+  .membres .btnPlusAccueil{
+      width: 100%;
+      border-radius: 6px;
+      border-width: 0px;
+  }
+
+  .card-footer{
+      width: 100%;
+      padding: 0px;
+  }
+
+  .imgPromo{
+    font-family: var(--title);
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .imgPromo h3{
+    font-size: 40px;
+  }
+
+
+  .imgPromo .swiper-slide{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  
+  .imgPromo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+
+.swiper-pagination-bullet{
+  background-color: var(--secondary-alt);
+  opacity: 100%;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--primary-alt);
+  width: 10px;
+  height: 10px;
+}
+
+.btn-close{
+    color: var(--primary-alt);
+    opacity: 1;
+
+}
+
+.cassetteContainer{
+  position:sticky;
+  width:100%;
+  top:50%;
+}
+.spriteCassette{
+  padding-bottom: 100%;
+  animation-name: cassetteAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(30);
+  background-size: 100%;
+ }
+
+ @keyframes cassetteAnimation{
+  from { background-position: 0 0; }
+  to { background-position: 0 103.45%; }
+}
+
+.idle{
+  background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349937292017684/animation_idle_accueil.png);
+}
+
+.scrollHaut{
+  background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349936143433758/animation_haut_accueil.png);
+} 
+
+.scrollBas{
+ background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/828349931538219048/animation_bas_accueil.png);
+}
+

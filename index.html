@@ -1,16 +1,288 @@
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"
+    integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><!-- CSS only -->
   <title>Day6</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-  <script src="main.js"></script>
-  <script src="accueil.js"></script>
+  <header>
+
+    <picture class="heroAccueil">
+      <source class="imgPaysage" srcset="img/day6_paysage.jpg" media="(orientation: landscape)">
+      <img class="imgPortrait" src="img/day6_portrait.jpg" alt="Day6">
+    </picture>
+    <div class="contrasteAccueil"></div>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-xxl-4 justify-content-center align-items-center text-center position-absolute top-50 start-50 translate-middle">
+          <div class="txtAccueil">
+            <h1 class="titre ">
+              Day6
+            </h1>
+            <p class="texte">
+              Day6 est un groupe de rock originaire de Séoul formé en 2015 par JYP Entertainement composé de 5 membres.
+            </p>
+            <a href="#main"><button class="btnPlus">En savoir plus</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="sticky-top navbar navbar-dark navbar-expand-sm">
+    <div class="container-fluid ">
+      <a class="navbar-brand order-1 order-sm-0" href="index.html"><img src="img/logo.png" alt="" width="30"
+          height="30"> Day6</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav"
+        aria-expanded="false" aria-label="Affichage/masquage de la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse order-0 order-sm-1 ">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="discographie.html" class="nav-link">Discographie</a>
+          </li>
+          <li class="nav-item">
+            <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalQuiz" class="quiz nav-link">Quiz</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" id="main">
+      <div class="row">
+        <div class="col-12 col-sm-9">
+          <section class="membres section">
+            <h1 class="titre titreMembres titreSection titreAccueil">Membres du groupe</h1>
+            <div class="row">
+
+              <div class="col-12 col-sm-6">
+                <div class="card">
+                  <img src="img/sungjin.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Sungjin</h3>
+                    <p class="positionMembres">Leader, Chanteur & Guitariste</p>
+                    <p>Park Sung Jin (<i>aussi connu sous le nom de Sungjin</i>) est le leader, le chanteur principal et
+                      le guitariste rythmique du groupe Day6.</p>
+                    <div class="card-footer">
+                      <a href="https://kprofiles.com/sungjin-day6-member-profile/"><button
+                          class="btnPlus btnPlusAccueil">En savoir plus</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 ">
+                <div class="card">
+                  <img src="img/jae.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Jae</h3>
+                    <p class="positionMembres">Chanteur & Guitariste</p>
+                    <p>Park Jae Hyung (<i>aussi connu sous le nom de Jae</i>) est le chanteur et guitariste principal du
+                      groupe Day6. Il est le plus âgé du groupe.</p>
+                    <div class="card-footer">
+                      <a href="https://kprofiles.com/jae-day6-member-profile/"><button class="btnPlus btnPlusAccueil">En
+                          savoir plus</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6">
+                <div class="card">
+                  <img src="img/youngk.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Young K</h3>
+                    <p class="positionMembres">Rappeur, Chanteur & Bassiste</p>
+                    <p>Kang Young Hyun (<i>aussi connu sous le nom de Young K ou Brian Kang</i>) est le rappeur et
+                      chanteur principal ainsi que bassiste du groupe Day6.</p>
+                    <div class="card-footer">
+                      <a href="https://kprofiles.com/young-k-day6-profile-facts/"><button
+                          class="btnPlus btnPlusAccueil">En savoir plus</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6">
+                <div class="card">
+                  <img src="img/wonpil.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Wonpil</h3>
+                    <p class="positionMembres">Chanteur, Claviériste & Synthétiseur</p>
+                    <p>Kim Won Pil (<i>aussi connu sous le nom de Wonpil </i>) est le chanteur principal, le claviériste
+                      et synthétiseur du groupe Day6.</p>
+                    <div class="card-footer">
+                      <a href="https://kprofiles.com/wonpil-day6-profile-facts-ideal-type/"><button
+                          class="btnPlus btnPlusAccueil">En savoir plus</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6">
+                <div class="card">
+                  <img src="img/dowoon.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Dowoon</h3>
+                    <p class="positionMembres">Chanteur & Batteur</p>
+                    <p>Yoon Do Woon (<i>aussi connu sous le nom de Dowoon</i>) est le batteur et chanteur du groupe
+                      Day6. Il est le plus jeune du groupe.</p>
+                    <div class="card-footer">
+                      <a href="https://kprofiles.com/dowoon-profile-facts/"><button class="btnPlus btnPlusAccueil">En
+                          savoir plus</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="imgPromo section">
+            <h1 class="titreSection titreAccueil">
+              Images promotionnelles
+            </h1>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide promo"><img src="img/promo02.jpg"></div>
+                <div class="swiper-slide promo"><img src="img/promo05.jpg"></div>
+                <div class="swiper-slide promo"><img src="img/promo03.jpg"></div>
+                <div class="swiper-slide promo"><img src="img/promo04.jpg"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </section>
+
+          <section class="video section">
+            <h1 class="titreSection titreAccueil">
+              Vidéo
+            </h1>
+            <div class="youtube">
+              <iframe src="https://www.youtube.com/embed/HwcCBnfhsR4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-sm-3 d-none d-sm-block">
+          <div class="cassetteContainer">
+            <div class="spriteCassette idle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-lg-0 text-center text-lg-start ">
+          <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalKarine" class="creatrice">Karine Cormier</a>
+        </div>
+        <div class="col-lg-6 order-lg-2 text-center text-lg-start ">
+          <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalSabrina" class="creatrice">Sabrina Kayani</a>
+        </div>
+        <div class="col-lg-6 order-lg-1 text-center text-lg-end">
+          <a href="https://github.com/sabrinakayani/karine-sabrina-megazord"
+            class="git">https://github.com/sabrinakayani/karine-sabrina-megazord</a>
+        </div>
+        <div class="col-lg-6 order-lg-3 text-center text-lg-end ">
+          <p>©2021</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="modalKarine" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title titleCreatrice">Karine Cormier</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgCreatrice" src="img/karine.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalSabrina" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title titleCreatrice border-0">Sabrina Kayani</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgCreatrice" src="img/sabrina.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalQuiz" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content quizContent">
+        <div class="modal-header quizHeader">
+          <h2 class="modal-title border-0 quizTitle">Quiz Day6</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modalQuiz">
+          <div class="quizMauvais"><img src="https://i.imgur.com/iYPa6Pn.png" class="neutre" />
+            <p class="texteMauvais"> OUPS </p>
+            <img
+              src="https://cdn.discordapp.com/attachments/623289176531402752/834873445086789694/output-onlinepngtools_1.png"
+              class="mauvais" />
+            <div class="cercleMauvais">
+              <img class="imgMauvais"
+                src="https://cdn.discordapp.com/attachments/623289176531402752/821855099592507452/kisspng-every-day6-march-k-pop-every-day6-january-jae-day6-drawing-5b5b065c6b81d2.522942731532692060.png" />
+            </div>
+          </div>
+          <div class="quizBonne"><img src="https://i.imgur.com/iYPa6Pn.png" class="originale" />
+            <p class="txtBonne"> BRAVO </p>
+            <img
+              src="https://cdn.discordapp.com/attachments/623289176531402752/821855559372374026/output-onlinepngtools_2.png"
+              class="bonne" />
+            <div class="containerBonne">
+              <img class="bonneImg"
+                src="https://i.pinimg.com/originals/c8/d4/06/c8d406c02a594bf7154073473486effb.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/accueil.js"></script>
+
+
 </body>
+
 </html>

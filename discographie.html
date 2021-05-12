@@ -1,18 +1,306 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8"><!-- CSS only -->
-  <title>Day6</title>
-  <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"
+        integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><!-- CSS only -->
+    <title>Day6</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-  <script src="main.js"></script>
-  <script src="discographie.js"></script>
+    <header class="headerDisco">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/demon.jpg"></div>
+                <div class="swiper-slide"><img src="img/entropy.jpg"></div>
+                <div class="swiper-slide"><img src="img/gravity.jpg"></div>
+                <div class="swiper-slide"><img src="img/remember_us.jpg"> </div>
+                <div class="swiper-slide"><img src="img/shoot_me.jpg"> </div>
+            </div>
+        </div>
+        <div class="contraste"></div>
+        <div class="container">
+            <div class="position-absolute bottom-0 start-0">
+                <div class="col-12 col-sm-8">
+                    <div class="txtDiscographie">
+                        <h1 class="titre">
+                            Discographie
+                        </h1>
+                        <p class="texte">
+                            Day6 ont jusqu'à présent produit 3 studio albums et 6 mini albums entre 2015 et 2020.
+                        </p>
+                        <a href="#main"><button class="btnPlus">En savoir plus</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav class="sticky-top navbar navbar-dark navbar-expand-sm">
+        <div class="container-fluid ">
+          <a class="navbar-brand order-1 order-sm-0" href="index.html"><img src="img/logo.png" alt="" width="30"
+              height="30"> Day6</a>
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Affichage/masquage de la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="mainNav" class="collapse navbar-collapse order-0 order-sm-1 ">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link ">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="discographie.html" class="nav-link active">Discographie</a>
+              </li>
+              <li class="nav-item">
+                <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalQuiz" class="quiz nav-link">Quiz</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <main>
+        <div class="container" id="main">
+            <div class="row">
+                <div class="col-sm-3 d-none d-sm-block">
+                    <div class="spriteContainerDiscographie">
+                        <div class="spriteDiscographie attente">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9">
+                    <section class="album">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <div class="txtAlbum">
+                                    <h3 class="albumTitle">The Book of Us : The Demon</h3>
+                                    <ol>
+                                        <li>Day and Night</li>
+                                        <li>Zombie</li>
+                                        <li>Tick Tock</li>
+                                        <li>Love me or Leave me</li>
+                                        <li>STOP</li>
+                                        <li>1 to 10</li>
+                                        <li>Afraid</li>
+                                        <li>Zombie (English Ver.)</li>
+                                    </ol>
+                                    <a href="https://en.wikipedia.org/wiki/The_Book_of_Us:_The_Demon"><button
+                                            class="btnPlus">En savoir plus</button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7">
+                                <img src="img/demon.jpg" class="img-fluid imgAlbum">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="album">
+                        <div class="row">
+                            <div class="col-12 col-sm-5 order-sm-1">
+                                <div class="txtAlbumPair">
+                                    <h3 class="albumTitle">The Book of Us: Entropy</h3>
+                                    <ol>
+                                        <li>Deep in Love</li>
+                                        <li>Sweet Chaos</li>
+                                        <li>Emergency</li>
+                                        <li>Rescue Me</li>
+                                        <li>365247</li>
+                                        <li>About Now</li>
+                                        <li>Ouch</li>
+                                        <li>Not Fine</li>
+                                        <li>Stop Talking</li>
+                                        <li>Not Mine</li>
+                                        <li>Like a Flowing Wind</li>
+                                    </ol>
+                                    <a href="https://en.wikipedia.org/wiki/The_Book_of_Us:_Entropy"><button
+                                            class="btnPlus">En savoir plus</button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7 order-sm-0">
+                                <img src="img/entropy.jpg" class="img-fluid imgAlbumPair">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="album">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <div class="txtAlbum">
+                                    <h3 class="albumTitle">The Book of Us : Gravity</h3>
+                                    <ol>
+                                        <li>For Me</li>
+                                        <li>Time of Our Life</li>
+                                        <li>How to Love</li>
+                                        <li>Wanna Go Back</li>
+                                        <li>Cover</li>
+                                        <li>Best Part</li>
+                                    </ol>
+                                    <a href="https://en.wikipedia.org/wiki/The_Book_of_Us:_Gravity"><button
+                                            class="btnPlus">En savoir plus</button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7">
+                                <img src="img/gravity.jpg" class="img-fluid imgAlbum">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="album">
+                        <div class="row">
+                            <div class="col-12 col-sm-5 order-sm-1">
+                                <div class="txtAlbumPair">
+                                    <h3 class="albumTitle">Remember Us : Youth Part 2</h3>
+                                    <ol>
+                                        <li>Hurt Road</li>
+                                        <li>Days Gone By</li>
+                                        <li>Headache</li>
+                                        <li>121U</li>
+                                        <li>So Cool</li>
+                                        <li>Marathon</li>
+                                        <li>Beautiful Feeling</li>
+                                    </ol>
+                                    <a href="https://en.wikipedia.org/wiki/Remember_Us:_Youth_Part_2"><button
+                                            class="btnPlus">En savoir plus</button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7 order-sm-0">
+                                <img src="img/remember_us.jpg" class="img-fluid imgAlbumPair">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="album">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <div class="txtAlbum">
+                                    <h3 class="albumTitle">Shoot Me : Youth Part 1</h3>
+                                    <ol>
+                                        <li>WARNING!</li>
+                                        <li>Shoot Me</li>
+                                        <li>Somehow</li>
+                                        <li>Feeling Good</li>
+                                        <li>Talking to</li>
+                                        <li>Still</li>
+                                        <li>Shoot Me (Instrumental)</li>
+                                    </ol>
+                                    <a href="https://en.wikipedia.org/wiki/Shoot_Me:_Youth_Part_1"><button
+                                            class="btnPlus">En savoir plus</button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7">
+                                <img src="img/shoot_me.jpg" class="img-fluid imgAlbum">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="video section">
+                        <h1 class="titreSection titreAccueil">
+                            Vidéo
+                        </h1>
+                        <div class="youtube">
+                            <iframe src="https://www.youtube.com/embed/HwcCBnfhsR4" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-0 text-center text-lg-start ">
+                    <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalKarine" class="creatrice">Karine
+                        Cormier</a>
+                </div>
+                <div class="col-lg-6 order-lg-2 text-center text-lg-start ">
+                    <a href="#my_modal" data-bs-toggle="modal" data-bs-target="#modalSabrina" class="creatrice">Sabrina
+                        Kayani</a>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-end">
+                    <a href="https://github.com/sabrinakayani/karine-sabrina-megazord"
+                        class="git">https://github.com/sabrinakayani/karine-sabrina-megazord</a>
+                </div>
+                <div class="col-lg-6 order-lg-3 text-center text-lg-end ">
+                    <p>©2021</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalKarine" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Karine Cormier</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="imgCreatrice" src="img/karine.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSabrina" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title border-0">Sabrina Kayani</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="imgCreatrice" src="img/sabrina.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalQuiz" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content quizContent">
+                <div class="modal-header quizHeader">
+                    <h2 class="modal-title border-0 quizTitle">Quiz Day6</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalQuiz">
+                    <div class="quizMauvais"><img src="https://i.imgur.com/iYPa6Pn.png" class="neutre" />
+                        <p class="texteMauvais"> OUPS </p>
+                        <img src="https://cdn.discordapp.com/attachments/623289176531402752/834873445086789694/output-onlinepngtools_1.png"
+                            class="mauvais" />
+                        <div class="cercleMauvais">
+                            <img class="imgMauvais"
+                                src="https://cdn.discordapp.com/attachments/623289176531402752/821855099592507452/kisspng-every-day6-march-k-pop-every-day6-january-jae-day6-drawing-5b5b065c6b81d2.522942731532692060.png" />
+                        </div>
+                    </div>
+                    <div class="quizBonne"><img src="https://i.imgur.com/iYPa6Pn.png" class="originale" />
+                        <p class="txtBonne"> BRAVO </p>
+                        <img src="https://cdn.discordapp.com/attachments/623289176531402752/821855559372374026/output-onlinepngtools_2.png"
+                            class="bonne" />
+                        <div class="containerBonne">
+                            <img class="bonneImg"
+                                src="https://i.pinimg.com/originals/c8/d4/06/c8d406c02a594bf7154073473486effb.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/discographie.js"></script>
 </body>
+
 </html>

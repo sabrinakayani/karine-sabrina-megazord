@@ -1,1 +1,153 @@
+.headerDisco .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    
+}
+.headerDisco .swiper-container {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+}
+.headerDisco img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    object-fit: contain;
+}
+.contraste{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#ffffff00, #857be2f5);
+    z-index: -1;
+}
 
+.txtDiscographie{
+    margin-bottom:40px;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.txtDiscographie h1{
+    font-size: 125px;
+    color: var(--primary);
+}
+
+.txtDiscographie p{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+@media (max-width:750px){
+    .txtDiscographie h1{
+        font-size: 75px;
+    }
+    .txtDiscographie p{
+        font-size: 20px;
+    }
+    .txtDiscographie button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:440px){
+    .txtDiscographie h1{
+        font-size: 60px;
+    }
+    .txtDiscographie p{
+        font-size: 20px;
+    }
+    .txtDiscographie button{
+        font-size: 15px;
+    }
+}
+.album{
+    margin-top:20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.imgAlbum{
+    margin-top:20px ;
+}
+
+.txtAlbum h3{
+    font-family: var(--title);
+    color: var(--secondary);
+    font-size: 30px;
+}
+
+.txtAlbum ol{
+    font-family: var(--regular);
+    font-size: 20px;
+}
+
+.imgAlbumPair{
+    margin-top:20px ;
+}
+
+.txtAlbumPair h3{
+    font-family: var(--title);
+    color: var(--secondary);
+    font-size: 30px;
+}
+
+.txtAlbumPair ol{
+    font-family: var(--regular);
+    font-size: 20px;
+}
+
+
+@media (min-width:576px){
+    .album{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .imgAlbum{
+        margin-top:0px ;
+    }
+}
+
+.album .btnPlus{
+    border-radius:6px;
+    border-width: 0px;
+}
+
+.spriteContainerDiscographie{
+    width: 100%;
+    position: sticky;
+    top: 50%;
+}
+
+
+.spriteDiscographie{
+    z-index: 10;
+    animation-name: spriteAnimation;
+    background-size:100%;
+    background-position: 0 0;
+    padding-bottom: 100%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(24);
+}
+  
+@keyframes spriteAnimation{
+    from {background-position: 0 0;}
+    to {background-position: 0 104.35%;} 
+}
+
+.attente{
+    background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/826161614998470676/animation_attente_sprites.png);
+}
+
+.scroll-down{
+    background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/826161635642441738/animation_avance_sprites.png);
+}
+
+.scroll-up{
+    background-image: url(https://cdn.discordapp.com/attachments/623289176531402752/826161654554951691/animation_recule_sprites.png);
+}
