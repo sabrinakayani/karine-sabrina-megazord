@@ -49,7 +49,7 @@ sectionList.forEach(section => {
     }, "0")
     .from(youtube, {
       opacity: 0,
-      scale: 0,
+      scale: 0.001,
     }, "0")
 });
 
