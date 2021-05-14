@@ -227,7 +227,7 @@ class Quiz {
       divModal.style.textAlign = "center";
       score.style.fontSize = "40px";
       pointage.innerText = "Pointage:";
-      score.innerText = this.score + "/8";
+      score.innerText = this.score + "/" + questionsList.length;
       modal.appendChild(divModal);
       divModal.appendChild(pointage);
       strongModal.appendChild(score);
